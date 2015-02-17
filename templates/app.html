@@ -1,0 +1,21 @@
+<form class="add-contact-form">
+    <div>
+        <input type="text" name="name" placeholder="name" required> </div>
+    <div>
+        <input type="email" name="email" placeholder="email" required> </div>
+    <div>
+        <button>Add</button>
+    </div>
+</form>
+
+<ul>
+    <% _.forEach(data, function(c){ %>
+        <li>
+            <span class="delete-contact">X</span>
+            <h6><%= c.name %></h6>
+            <p>
+                <%= c.email %>
+            </p>
+        </li>
+    <% }) %>
+</ul>
